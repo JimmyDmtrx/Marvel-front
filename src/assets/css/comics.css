@@ -1,0 +1,41 @@
+.search-comics {
+  width: 100%;
+  padding-left: 40px;
+  background-color: #6464643b;
+  border-radius: 5px;
+  height: 37px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.card-comics {
+  font-family: "Marvel", sans-serif;
+  display: flex;
+  width: 240px;
+  height: 500px;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 10px;
+  background-color: bisque;
+  margin: 5px;
+}
+.card-comics img {
+  height: 400px;
+  width: 240px;
+  object-fit: cover;
+}
+.contain-comics-card {
+  border: solid 5px tomato;
+  margin: 10px;
+
+  background-color: aliceblue;
+}
+.what {
+  border: solid 5px chartreuse;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}

@@ -1,0 +1,30 @@
+.header-logo {
+  object-fit: cover;
+  width: 400px;
+}
+.header {
+  max-width: 100%;
+}
+.container-header {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-evenly;
+}
+.sous-countain-header {
+  display: flex;
+  justify-content: center;
+  flex: 2;
+  background-color: azure;
+}
+
+.header-button {
+  padding: 15px;
+  font-size: 2rem;
+}
+
+.button-container-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}

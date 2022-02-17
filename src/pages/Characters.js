@@ -6,18 +6,20 @@ const Characters = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [dataCharac, setDataCharac] = useState();
   const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
+  const limit = 10;
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `http://localhost:3000/characters?name=${search}`
+        `http://localhost:4000/characters?name=${search}&limit=${limit}&page=${page}`
       );
       setDataCharac(response.data);
       setIsLoading(false);
     };
 
     fetchData();
-  }, [search]);
+  }, [search, limit, page]);
   const handleSearch = (event) => {
     const value = event.target.value;
     setSearch(value);
@@ -63,6 +65,8 @@ const Characters = () => {
           </div>
         );
       })}
+      <button onClick={() => setPage(page - 1)}>Page précédente</button>
+      <button onClick={() => setPage(page + 1)}>Page suivante</button>
     </div>
   );
 };

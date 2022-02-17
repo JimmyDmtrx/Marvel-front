@@ -1,1 +1,13 @@
 /* Other rules */
+@import url("https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap");
+
+body {
+  max-height: 100vh;
+  max-width: 100vh;
+  background-color: rgba(139, 72, 72, 0.349);
+  margin: auto;
+}
+* {
+  font-family: "Marvel", sans-serif;
+  box-sizing: border-box;
+}
