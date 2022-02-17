@@ -1,24 +1,29 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [verifyPassword, setverifyPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (event) => {
-    try {
-      event.preventDefault();
-      const response = await axios.post("./http://localhost:3000/user_routes", {
-        username,
-        email,
-        password,
-      });
-    } catch (error) {
-      if (error.response.status === 400 || error.response.status === 401) {
-        setErrorMessage("Mauvais email et/ou mot de passe");
+    if (username && email && password && verifyPassword) {
+      if (password === verifyPassword) {
+        try {
+          event.preventDefault();
+          const response = await axios.post("http://localhost:3000/signup", {
+            username,
+            email,
+            password,
+          });
+          console.log("when signup =>", response.data);
+        } catch (error) {
+          if (error.response.status === 400 || error.response.status === 401) {
+            setErrorMessage("Mauvais email et/ou mot de passe");
+          }
+        }
       }
     }
   };

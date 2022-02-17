@@ -4,6 +4,9 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Comics from "./pages/Comics";
 import Characters from "./pages/Characters";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Comics_id from "./pages/Comic_id";
 function App() {
   return (
     <Router>
@@ -12,8 +15,9 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/comics" element={<Comics />}></Route>
         <Route path="/characters" element={<Characters />}></Route>
-        <Route></Route>
-        <Route></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/comics/:id" element={<Comics_id />} />
       </Routes>
     </Router>
   );

@@ -2,7 +2,7 @@ const Login = () => {
   return (
     <div>
       <h2>Se connecter</h2>
-      <div>
+      {/* <div>
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder="email" />
 
@@ -12,7 +12,7 @@ const Login = () => {
 
           <span>{errorMessage}</span>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };
