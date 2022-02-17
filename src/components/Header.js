@@ -8,13 +8,13 @@ const Header = () => {
         <img src={Logo} alt="logo" />
       </Link>
 
-      <input type="text" placeholder="Votre recherche..." />
       <Link to={"/signup"}>
         <button>s'inscrire</button>
       </Link>
       <Link to={"/login"}>
         <button>se connecter</button>
       </Link>
+      <div></div>
     </div>
   );
 };

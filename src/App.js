@@ -6,7 +6,7 @@ import Comics from "./pages/Comics";
 import Characters from "./pages/Characters";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import Comics_id from "./pages/Comic_id";
+import ComicsId from "./pages/ComicId";
 function App() {
   return (
     <Router>
@@ -17,7 +17,7 @@ function App() {
         <Route path="/characters" element={<Characters />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
-        <Route path="/comics/:id" element={<Comics_id />} />
+        <Route path="/comics/:id" element={<ComicsId />} />
       </Routes>
     </Router>
   );
