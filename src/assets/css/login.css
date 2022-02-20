@@ -1,0 +1,57 @@
+.form-login {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+.signup-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.input-signup {
+  justify-content: center;
+  text-align: center;
+  border: none;
+  flex-direction: column;
+  border-bottom: 1px solid #fcced3;
+  height: 35px;
+  margin-bottom: 20px;
+}
+.shadow-card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  cursor: pointer;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #e52d27 0%,
+    #b31217 51%,
+    #e52d27 100%
+  );
+}
+.btn-grad {
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  margin: 10px;
+  padding: 15px 36px;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 1px;
+  display: block;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.h2form {
+  text-align: center;
+  margin-top: 30px;
+  color: rgba(0, 0, 0, 0.616);
+  font-size: xx-large;
+}

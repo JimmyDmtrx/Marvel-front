@@ -1,20 +1,46 @@
-.button-character-home {
-  width: 400px;
-  height: 550px;
+.div-home-charac {
+  width: 300px;
+  height: 450px;
+  background-color: white;
+  background-image: url(../img/gif-back.gif);
+  border: white 5px solid;
+}
+.div-home-comics {
+  width: 300px;
+  height: 450px;
+  background-color: white;
+  background-image: url(../img/newcomgif.webp);
+  border: white 5px solid;
 }
 
 .contain-home-button {
+  padding-top: 100px;
+  background-color: black;
   display: flex;
-  justify-content: center;
   justify-content: space-evenly;
-  align-items: center;
   height: 100vh;
-  padding: 10px;
+  box-shadow: 10px 10px 213px 53px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 10px 10px 213px 53px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 10px 10px 213px 53px rgba(0, 0, 0, 1);
 }
-.button-character-home:hover {
-  box-shadow: 0 0 11px rgba(255, 0, 0, 0.418);
+.div-home-charac:hover {
+  box-shadow: 0px 0px 72px 1px rgba(255, 0, 0, 1);
+  -webkit-box-shadow: 0px 0px 72px 1px rgba(255, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 72px 1px rgba(255, 0, 0, 1);
+  cursor: pointer;
+}
+.div-home-comics:hover {
+  box-shadow: 0px 0px 72px 1px rgba(255, 0, 0, 1);
+  -webkit-box-shadow: 0px 0px 72px 1px rgba(255, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 72px 1px rgba(255, 0, 0, 1);
   cursor: pointer;
 }
 .text-home-button {
-  font-size: 5.2rem;
+  margin-bottom: 35px;
+  color: white;
+  font-family: "Marvel", sans-serif;
+  text-align: center;
+  font-size: 4.5rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff,
+    0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
 }

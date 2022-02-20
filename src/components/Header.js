@@ -1,14 +1,15 @@
 import Logo from "../assets/img/Marvel_Logo.svg.png";
 import { Link } from "react-router-dom";
 import "../assets/css/header.css";
+import { Navigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ token, setUser }) => {
   return (
     <div className="header">
       <div className="container-header">
         <div className="button-container-header">
           <Link to={"/signup"}>
-            <button className="header-button">S'INSCRIRE</button>
+            <button className="btn-grad">S'INSCRIRE</button>
           </Link>
         </div>
         <div className="sous-countain-header">
@@ -17,12 +18,22 @@ const Header = () => {
           </Link>
         </div>
         <div className="button-container-header">
-          <Link to={"/login"}>
-            <button className="header-button">se connecter</button>
-          </Link>
+          {token ? (
+            <button
+              className="submitButton"
+              onClick={() => {
+                setUser(null);
+                Navigate("/");
+              }}
+            >
+              Se déconnecter
+            </button>
+          ) : (
+            <Link to={"/login"}>
+              <button className="btn-grad">se connecter</button>
+            </Link>
+          )}
         </div>
-
-        <div></div>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "../assets/css/comicId.css";
 
 const Comic_id = () => {
   const { id } = useParams();
@@ -18,27 +19,39 @@ const Comic_id = () => {
     fetchData();
   }, [id]);
   return isLoading ? (
-    <div>en cours de marvellement</div>
-  ) : (
     <div>
-      <p>{data.name}</p>
-      <p>{data.description}</p>
+      <p>en cours de marvellement</p>
+    </div>
+  ) : (
+    <div className="contain">
+      <p className="titre-comics-id">{data.name}</p>
+
       <img
+        className="contain-img "
         src={data.thumbnail.path + "." + data.thumbnail.extension}
         alt="comicId"
       />
       <div>
-        comics avec ce character
+        <div>
+          <p> comics avec ce character</p>
+        </div>
+
         {data.comics.map((comic, index) => {
           return (
-            <div key={comic._id}>
+            <div className="contain" key={comic._id}>
+              <div className="titre-div-comicid">
+                <p className="titre-comics-id">{comic.title}</p>
+              </div>
+
               <img
+                className="contain-img "
                 src={comic.thumbnail.path + "." + comic.thumbnail.extension}
                 alt="comicbyid"
               />
-              <p>{comic.title}</p>
-              <p>{comic.description}</p>
-              <div></div>
+
+              <div className="descrip-comic-id">
+                <p className="descrip-comics">{comic.description}</p>
+              </div>
             </div>
           );
         })}

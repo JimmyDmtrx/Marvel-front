@@ -5,17 +5,15 @@ const Home = () => {
   return (
     <div className="contain-home-button">
       <div>
+        <p className="text-home-button">COMICS</p>
         <Link to={"/comics"}>
-          <button className="button-character-home">
-            <p className="text-home-button">COMICS</p>
-          </button>
+          <div className="div-home-comics"></div>
         </Link>
       </div>
       <div>
+        <p className="text-home-button">HERO(E)S</p>
         <Link to={"/characters"}>
-          <button className="button-character-home">
-            <p className="text-home-button">HERO(E)S</p>
-          </button>
+          <div className="div-home-charac"></div>
         </Link>
       </div>
     </div>

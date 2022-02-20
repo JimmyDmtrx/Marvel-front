@@ -1,7 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+p {
+  font-family: "roboto", sans-serif;
+}
 .search-comics {
   width: 100%;
   padding-left: 40px;
-  background-color: #6464643b;
+  background-color: #e0e0e0;
   border-radius: 5px;
   height: 37px;
   border: none;
@@ -9,17 +15,85 @@
   font-size: 16px;
   margin-top: 15px;
   margin-bottom: 15px;
+  color: white;
+}
+.contain-button-comics {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.btn-pagi {
+  background-image: linear-gradient(
+    to right,
+    #e52d27 0%,
+    #b31217 51%,
+    #e52d27 100%
+  );
+}
+.btn-pagi {
+  font-family: "Roboto Mono", monospace;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 1px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  border: 1px solid white;
+}
+.titre-comics {
+  font-size: 1rem;
+  text-align: justify;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  color: #ffffff;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: uppercase;
 }
 .card-comics {
-  font-family: "Marvel", sans-serif;
   display: flex;
   width: 240px;
   height: 500px;
-  flex-direction: column;
   overflow: hidden;
-  padding: 10px;
-  background-color: bisque;
-  margin: 5px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.829);
+  border: 2px solid white;
+}
+.titre-comics-div {
+  margin-bottom: 20px;
+}
+.img-contain-div-comics {
+  margin-bottom: 5px;
+  height: 400px;
+}
+.descrip-comics {
+  text-align: justify;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.4px;
+  word-spacing: 1.4px;
+  color: #ffffff;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+.descrip-div {
+  background-color: white;
 }
 .card-comics img {
   height: 400px;
@@ -27,13 +101,14 @@
   object-fit: cover;
 }
 .contain-comics-card {
-  border: solid 5px tomato;
-  margin: 10px;
-
-  background-color: aliceblue;
+  padding: 5px;
+  background-color: black;
+  display: flex;
 }
 .what {
-  border: solid 5px chartreuse;
+  box-shadow: 0px 0px 72px 95px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0px 0px 72px 95px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 72px 95px rgba(0, 0, 0, 1);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
