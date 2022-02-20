@@ -16,11 +16,14 @@ const SignUp = ({ setUser }) => {
       if (password === verifyPassword) {
         try {
           event.preventDefault();
-          const response = await axios.post("http://localhost:4000/signup", {
-            username,
-            email,
-            password,
-          });
+          const response = await axios.post(
+            "https://marvel-back-request.herokuapp.com/signup",
+            {
+              username,
+              email,
+              password,
+            }
+          );
           if (response.data.token) {
             setUser(response.data.token);
             navigate("/");

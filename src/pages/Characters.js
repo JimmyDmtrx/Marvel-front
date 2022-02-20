@@ -13,7 +13,7 @@ const Characters = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `http://localhost:4000/characters?name=${search}&limit=${limit}&page=${page}`
+        `https://marvel-back-request.herokuapp.com/characters?name=${search}&limit=${limit}&page=${page}`
       );
       setDataCharac(response.data);
       setIsLoading(false);
