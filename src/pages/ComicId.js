@@ -11,7 +11,7 @@ const Comic_id = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://marvel-back-request.herokuapp.com/omics/${id}`
+        `https://marvel-back-request.herokuapp.com/comics/${id}`
       );
       // console.log("log id", id);
       // console.log(response.data);
