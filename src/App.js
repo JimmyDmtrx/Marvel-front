@@ -9,7 +9,9 @@ import SignUp from "./pages/SignUp";
 import ComicsId from "./pages/ComicId";
 import { useState } from "react";
 import Cookies from "js-cookie";
-
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+library.add(faHeart);
 function App() {
   const [token, setToken] = useState(Cookies.get("userToken") || null);
 

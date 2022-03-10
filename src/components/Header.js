@@ -6,6 +6,7 @@ import { Navigate } from "react-router-dom";
 const Header = ({ token, setUser }) => {
   return (
     <div className="header">
+      <div></div>
       <div className="container-header">
         <div className="button-container-header">
           <Link to={"/signup"}>

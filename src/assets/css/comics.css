@@ -52,7 +52,7 @@ p {
   text-align: justify;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: Impact, Charcoal, sans-serif;
+  font-family: "Lucida Console", monospace;
   font-size: 16px;
   letter-spacing: 1px;
   word-spacing: 1px;
@@ -99,6 +99,7 @@ p {
   height: 400px;
   width: 240px;
   object-fit: cover;
+  justify-content: flex-end;
 }
 .contain-comics-card {
   padding: 5px;

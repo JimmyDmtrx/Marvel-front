@@ -71,13 +71,13 @@ const Comics = () => {
                       key={index}
                     />
                   </div>
-                  {elem.description ? (
+                  {/* {elem.description ? (
                     <div className="descrp-div">
                       <p className="descrip-comics">{elem.description}</p>
                     </div>
                   ) : (
                     ""
-                  )}
+                  )} */}
                 </div>
               ) : (
                 ""

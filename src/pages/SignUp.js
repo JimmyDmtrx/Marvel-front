@@ -40,10 +40,10 @@ const SignUp = ({ setUser }) => {
     }
   };
   return (
-    <div className="-signup-contain">
+    <div className="signup-contain">
       <div className="form-contain">
         <form className="form" onSubmit={handleSubmit}>
-          <h1>Créez un compte</h1>
+          <h1 className="titre">Créez un compte</h1>
           <input
             className="inputForm"
             value={username}

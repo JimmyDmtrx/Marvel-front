@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "../assets/css/characters.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+library.add(faHeart);
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Characters = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [dataCharac, setDataCharac] = useState();
@@ -73,10 +77,13 @@ const Characters = () => {
                       alt="characters"
                     />
                   </Link>
-
-                  <div>
-                    <p className="descrip-comics">{elem.description}</p>
+                  <div className="btn-fav">
+                    fav
+                    <FontAwesomeIcon icon="fa-regular fa-heart" />
                   </div>
+                  {/* <div>
+                    <p className="descrip-comics">{elem.description}</p>
+                  </div> */}
                 </div>
               ) : (
                 ""

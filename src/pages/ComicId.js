@@ -51,9 +51,9 @@ const Comic_id = () => {
                 alt="comicbyid"
               />
 
-              <div className="descrip-comic-id">
+              {/* <div className="descrip-comic-id">
                 <p className="descrip-comics">{comic.description}</p>
-              </div>
+              </div> */}
             </div>
           );
         })}
