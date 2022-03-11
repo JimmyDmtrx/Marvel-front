@@ -2,12 +2,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "../assets/css/characters.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-library.add(faHeart);
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const Characters = () => {
+
+const Characters = (token) => {
   const [isLoading, setIsLoading] = useState(true);
   const [dataCharac, setDataCharac] = useState();
   const [search, setSearch] = useState("");
@@ -17,7 +14,7 @@ const Characters = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://marvel-back-request.herokuapp.com/characters?name=${search}&limit=${limit}&page=${page}`
+        `https://marvel-back-jimmy.herokuapp.com/characters?name=${search}&limit=${limit}&page=${page}`
       );
       setDataCharac(response.data);
       setIsLoading(false);
@@ -79,7 +76,14 @@ const Characters = () => {
                   </Link>
                   <div className="btn-fav">
                     fav
-                    <FontAwesomeIcon icon="fa-regular fa-heart" />
+                    {token ? (
+                      <FontAwesomeIcon className="icone" icon="heart" />
+                    ) : (
+                      <FontAwesomeIcon
+                        className="icone"
+                        icon={["regular", "heart"]}
+                      />
+                    )}
                   </div>
                   {/* <div>
                     <p className="descrip-comics">{elem.description}</p>

@@ -10,6 +10,9 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+.icone {
+  color: white;
+}
 .card-comics {
   display: flex;
   width: 240px;

@@ -14,7 +14,7 @@ const Login = ({ setUser }) => {
     try {
       event.preventDefault();
       const response = await axios.post(
-        "https://marvel-back-request.herokuapp.com/login",
+        "https://marvel-back-jimmy.herokuapp.com/login",
         {
           email: email,
           password: password,
