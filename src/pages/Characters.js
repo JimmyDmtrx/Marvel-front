@@ -4,17 +4,19 @@ import { Link } from "react-router-dom";
 import "../assets/css/characters.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Characters = (token) => {
+const Characters = ({ token }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [dataCharac, setDataCharac] = useState();
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const limit = 30;
 
+  console.log("token", token);
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://marvel-back-jimmy.herokuapp.com/characters?name=${search}&limit=${limit}&page=${page}`
+        // `https://marvel-back-jimmy.herokuapp.com/characters?name=${search}&limit=${limit}&page=${page}`
+        `http://localhost:4000/characters?name=${search}&limit=${limit}&page=${page}`
       );
       setDataCharac(response.data);
       setIsLoading(false);
@@ -22,11 +24,27 @@ const Characters = (token) => {
 
     fetchData();
   }, [search, limit, page]);
+
   const handleSearch = (event) => {
     const value = event.target.value;
     setSearch(value);
 
-    console.log(value);
+    // console.log(value);
+  };
+  const handleAddTofav = async (elem, event) => {
+    console.log("elem==>", elem);
+    try {
+      event.preventDefault();
+      const response = await axios.post(
+        // "https://marvel-back-jimmy.herokuapp.com/favorites",
+        "http://localhost:4000/favorites",
+
+        {
+          characters: elem,
+          token: token,
+        }
+      );
+    } catch (error) {}
   };
 
   return isLoading ? (
@@ -59,7 +77,7 @@ const Characters = (token) => {
       </div>
       <div className="what">
         {dataCharac.results.map((elem, index) => {
-          console.log("elem===> charac", elem);
+          // console.log("elem===> charac", elem);
           return (
             <div key={index}>
               {elem.thumbnail.path !==
@@ -77,7 +95,11 @@ const Characters = (token) => {
                   <div className="btn-fav">
                     fav
                     {token ? (
-                      <FontAwesomeIcon className="icone" icon="heart" />
+                      <FontAwesomeIcon
+                        className="icone"
+                        icon="heart"
+                        onClick={(event) => handleAddTofav(elem, event)}
+                      />
                     ) : (
                       <FontAwesomeIcon
                         className="icone"

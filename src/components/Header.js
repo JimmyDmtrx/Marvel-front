@@ -1,9 +1,10 @@
 import Logo from "../assets/img/Marvel_Logo.svg.png";
 import { Link } from "react-router-dom";
 import "../assets/css/header.css";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = ({ token, setUser }) => {
+  const navigate = useNavigate();
   return (
     <div className="header">
       <div></div>
@@ -25,7 +26,7 @@ const Header = ({ token, setUser }) => {
                 className="btn-grad"
                 onClick={() => {
                   setUser(null);
-                  Navigate("/");
+                  navigate("/");
                 }}
               >
                 Déconnection
@@ -33,7 +34,7 @@ const Header = ({ token, setUser }) => {
               <button
                 className="btn-grad"
                 onClick={() => {
-                  Navigate("/favorites");
+                  navigate("/favorites");
                 }}
               >
                 mes favoris

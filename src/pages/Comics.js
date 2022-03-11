@@ -10,7 +10,8 @@ const Comics = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://marvel-back-jimmy.herokuapp.com/comics?title=${search}&limit=${limit}&page=${page}`
+        // `https://marvel-back-jimmy.herokuapp.com/comics?title=${search}&limit=${limit}&page=${page}`
+        `http://localhost:4000/comics?title=${search}&limit=${limit}&page=${page}`
       );
       //   console.log(response.data);
       setDatacomics(response.data);
