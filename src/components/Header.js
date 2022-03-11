@@ -20,15 +20,25 @@ const Header = ({ token, setUser }) => {
         </div>
         <div className="button-container-header">
           {token ? (
-            <button
-              className="submitButton"
-              onClick={() => {
-                setUser(null);
-                Navigate("/");
-              }}
-            >
-              Se déconnecter
-            </button>
+            <div>
+              <button
+                className="btn-grad"
+                onClick={() => {
+                  setUser(null);
+                  Navigate("/");
+                }}
+              >
+                Déconnection
+              </button>
+              <button
+                className="btn-grad"
+                onClick={() => {
+                  Navigate("/favorites");
+                }}
+              >
+                mes favoris
+              </button>
+            </div>
           ) : (
             <Link to={"/login"}>
               <button className="btn-grad">se connecter</button>
