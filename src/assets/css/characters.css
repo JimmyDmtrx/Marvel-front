@@ -6,13 +6,20 @@
   box-sizing: border-box;
   justify-content: center;
 }
+
 .card-comics:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
+
+.suppr {
+  color: white;
+}
+
 .icone {
   color: white;
 }
+
 .card-comics {
   display: flex;
   width: 240px;
@@ -21,11 +28,13 @@
   padding: 10px;
   margin: 10px;
 }
+
 .search-charac {
   display: block;
   width: 100%;
 }
+
 .btn-fav {
   padding: 20px;
-  border: 2px solid chartreuse;
+
 }

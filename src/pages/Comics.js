@@ -9,17 +9,21 @@ const Comics = () => {
   const limit = 30;
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(
-        // `https://marvel-back-jimmy.herokuapp.com/comics?title=${search}&limit=${limit}&page=${page}`
-        `http://localhost:4000/comics?title=${search}&limit=${limit}&page=${page}`
-      );
-      //   console.log(response.data);
-      setDatacomics(response.data);
-      setIsLoading(false);
+      try {
+        const response = await axios.get(
+          `https://marvel-back-jimmy.herokuapp.com/comics?title=${search}&limit=${limit}&page=${page}`
+          // `http://localhost:4000/comics?title=${search}&limit=${limit}&page=${page}`
+        );
+        //   console.log(response.data);
+        setDatacomics(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error.response);
+      }
     };
-
     fetchData();
   }, [search, limit, page]);
+
   const handleSearch = (event) => {
     const value = event.target.value;
     setSearch(value);

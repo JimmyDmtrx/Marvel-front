@@ -10,13 +10,13 @@ const Characters = ({ token }) => {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const limit = 30;
-
-  console.log("token", token);
+  // console.log("characters -->", characters);
+  // console.log("token", token);
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        // `https://marvel-back-jimmy.herokuapp.com/characters?name=${search}&limit=${limit}&page=${page}`
-        `http://localhost:4000/characters?name=${search}&limit=${limit}&page=${page}`
+        `https://marvel-back-jimmy.herokuapp.com/characters?name=${search}&limit=${limit}&page=${page}`
+        // `http://localhost:4000/characters?name=${search}&limit=${limit}&page=${page}`
       );
       setDataCharac(response.data);
       setIsLoading(false);
@@ -32,12 +32,13 @@ const Characters = ({ token }) => {
     // console.log(value);
   };
   const handleAddTofav = async (elem, event) => {
-    console.log("elem==>", elem);
+    alert('added to fav')
+    // console.log("elem==>", elem);
     try {
       event.preventDefault();
       const response = await axios.post(
-        // "https://marvel-back-jimmy.herokuapp.com/favorites",
-        "http://localhost:4000/favorites",
+        "https://marvel-back-jimmy.herokuapp.com/favorites",
+        // "http://localhost:4000/favorites",
 
         {
           characters: elem,
@@ -93,7 +94,7 @@ const Characters = ({ token }) => {
                     />
                   </Link>
                   <div className="btn-fav">
-                    fav
+                    favoris
                     {token ? (
                       <FontAwesomeIcon
                         className="icone"
@@ -101,10 +102,11 @@ const Characters = ({ token }) => {
                         onClick={(event) => handleAddTofav(elem, event)}
                       />
                     ) : (
-                      <FontAwesomeIcon
-                        className="icone"
-                        icon={["regular", "heart"]}
-                      />
+                      // <FontAwesomeIcon
+                      //   className="icone"
+                      //   icon={["regular", "heart"]}
+                      // />
+                      <span>connect to add favorites</span>
                     )}
                   </div>
                   {/* <div>

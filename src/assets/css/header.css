@@ -6,8 +6,7 @@ a {
   width: 300px;
   border: white 3px solid;
 }
-.header {
-}
+
 .container-header {
   background-color: black;
   display: flex;

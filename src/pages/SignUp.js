@@ -17,8 +17,8 @@ const SignUp = ({ setUser }) => {
         try {
           event.preventDefault();
           const response = await axios.post(
-            // "https://marvel-back-jimmy.herokuapp.com/signup",
-            "http://localhost:4000/signup",
+            "https://marvel-back-jimmy.herokuapp.com/signup",
+            // "http://localhost:4000/signup",
             {
               username,
               email,
